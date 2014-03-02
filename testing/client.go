@@ -13,6 +13,10 @@ type TestHttpRequest struct {
 	httplib.BeegoHttpRequest
 }
 
+func SetPort(p string) {
+    port = p
+}
+
 func getPort() string {
 	if port == "" {
 		config, err := config.NewConfig("ini", "../conf/app.conf")
